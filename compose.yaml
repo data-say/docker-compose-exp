@@ -6,5 +6,10 @@ services:
     environment:
       - HOST=redis
       - PORT=6379
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /code
   redis:
     image: "redis:alpine"
