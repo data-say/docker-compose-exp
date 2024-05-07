@@ -3,5 +3,8 @@ services:
     build: .
     ports:
       - "8000:5000"
+    environment:
+      - HOST=redis
+      - PORT=6379
   redis:
     image: "redis:alpine"
